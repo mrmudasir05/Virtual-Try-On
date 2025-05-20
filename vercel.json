@@ -4,6 +4,10 @@
     {
       "src": "next.config.mjs",
       "use": "@vercel/next"
+    },
+    {
+      "src": "backend/main.py",
+      "use": "@vercel/python"
     }
   ],
   "env": {
