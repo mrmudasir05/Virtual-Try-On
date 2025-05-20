@@ -39,7 +39,13 @@ if missing_vars:
         os.environ["SUPABASE_ANON_KEY"] = "your-anon-key"
         print("Using placeholder SUPABASE_ANON_KEY. Please set the correct value.")
 
-app = FastAPI()
+# Initialize FastAPI app
+app = FastAPI(
+    title="Virtual Try-On API",
+    description="API for Virtual Try-On application",
+    version="1.0.0",
+    root_path="/api"  # Add this for Vercel deployment
+)
 
 # Configure CORS
 app.add_middleware(
